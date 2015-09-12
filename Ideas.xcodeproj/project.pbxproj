@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0A41A61BA44FA1004BA0C5 /* NewIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A41A51BA44FA1004BA0C5 /* NewIdeaViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2C0A41A81BA4534B004BA0C5 /* IdeasListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A41A71BA4534B004BA0C5 /* IdeasListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		2CCBC9411BA443E7009AC174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCBC9401BA443E7009AC174 /* AppDelegate.swift */; };
-		2CCBC9431BA443E7009AC174 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCBC9421BA443E7009AC174 /* ViewController.swift */; };
 		2CCBC9461BA443E7009AC174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCBC9441BA443E7009AC174 /* Main.storyboard */; };
 		2CCBC9491BA443E7009AC174 /* Ideas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CCBC9471BA443E7009AC174 /* Ideas.xcdatamodeld */; };
 		2CCBC94B1BA443E7009AC174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CCBC94A1BA443E7009AC174 /* Assets.xcassets */; };
@@ -16,9 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C0A41A51BA44FA1004BA0C5 /* NewIdeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIdeaViewController.swift; sourceTree = "<group>"; };
+		2C0A41A71BA4534B004BA0C5 /* IdeasListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeasListViewController.swift; sourceTree = "<group>"; };
 		2CCBC93D1BA443E7009AC174 /* Ideas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ideas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCBC9401BA443E7009AC174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CCBC9421BA443E7009AC174 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CCBC9451BA443E7009AC174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CCBC9481BA443E7009AC174 /* Ideas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ideas.xcdatamodel; sourceTree = "<group>"; };
 		2CCBC94A1BA443E7009AC174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				2CCBC9401BA443E7009AC174 /* AppDelegate.swift */,
-				2CCBC9421BA443E7009AC174 /* ViewController.swift */,
 				2CCBC9441BA443E7009AC174 /* Main.storyboard */,
 				2CCBC94A1BA443E7009AC174 /* Assets.xcassets */,
 				2CCBC94C1BA443E7009AC174 /* LaunchScreen.storyboard */,
 				2CCBC94F1BA443E7009AC174 /* Info.plist */,
 				2CCBC9471BA443E7009AC174 /* Ideas.xcdatamodeld */,
+				2C0A41A51BA44FA1004BA0C5 /* NewIdeaViewController.swift */,
+				2C0A41A71BA4534B004BA0C5 /* IdeasListViewController.swift */,
 			);
 			path = Ideas;
 			sourceTree = "<group>";
@@ -138,7 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCBC9491BA443E7009AC174 /* Ideas.xcdatamodeld in Sources */,
-				2CCBC9431BA443E7009AC174 /* ViewController.swift in Sources */,
+				2C0A41A81BA4534B004BA0C5 /* IdeasListViewController.swift in Sources */,
+				2C0A41A61BA44FA1004BA0C5 /* NewIdeaViewController.swift in Sources */,
 				2CCBC9411BA443E7009AC174 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +291,7 @@
 				2CCBC9541BA443E7009AC174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

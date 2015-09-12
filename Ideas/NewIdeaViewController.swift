@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NewIdeaViewController.swift
 //  Ideas
 //
 //  Created by Eddie Lee on 12/09/2015.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NewIdeaViewController: UIViewController {
+
+    @IBOutlet weak var newIdeaTextArea: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func AddNewIdea(sender: AnyObject) {
 
+        newIdeaTextArea.text = "";
+    }
+    
+    
 }
-
