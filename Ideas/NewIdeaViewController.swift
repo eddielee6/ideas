@@ -10,7 +10,7 @@ import UIKit
 
 class NewIdeaViewController: UIViewController {
 
-    @IBOutlet weak var newIdeaTextArea: UITextView!
+    @IBOutlet weak var newIdeaTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +23,6 @@ class NewIdeaViewController: UIViewController {
     }
 
     @IBAction func AddNewIdea(sender: AnyObject) {
-
-        newIdeaTextArea.text = "";
+        newIdeaTextField.text = "";
     }
-    
-    
 }

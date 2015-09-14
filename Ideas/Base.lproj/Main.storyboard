@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7b3-QH-GqU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7b3-QH-GqU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -71,21 +71,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q50-z7-V7s">
-                                <rect key="frame" x="20" y="72" width="560" height="132"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="132" id="OGe-nh-v2Q"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="652"/>
-                                </variation>
-                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7V-bJ-kJk">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCP-ys-EAn">
-                                <rect key="frame" x="20" y="212" width="560" height="30"/>
+                                <rect key="frame" x="20" y="110" width="560" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Add New Idea"/>
                                 <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -99,17 +91,17 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RCP-ys-EAn" firstAttribute="leading" secondItem="Q50-z7-V7s" secondAttribute="leading" id="76h-K5-UxH"/>
-                            <constraint firstItem="Q50-z7-V7s" firstAttribute="trailing" secondItem="LaQ-LQ-A9a" secondAttribute="trailingMargin" id="KLp-io-fbc"/>
-                            <constraint firstItem="Q50-z7-V7s" firstAttribute="top" secondItem="pYQ-9Z-4LO" secondAttribute="bottom" constant="8" symbolic="YES" id="ZWR-z5-3St"/>
-                            <constraint firstItem="RCP-ys-EAn" firstAttribute="top" secondItem="Q50-z7-V7s" secondAttribute="bottom" constant="8" symbolic="YES" id="fsV-fs-IIN"/>
-                            <constraint firstItem="Q50-z7-V7s" firstAttribute="leading" secondItem="LaQ-LQ-A9a" secondAttribute="leadingMargin" id="gYP-dv-Mzr"/>
-                            <constraint firstItem="RCP-ys-EAn" firstAttribute="trailing" secondItem="Q50-z7-V7s" secondAttribute="trailing" id="iFn-g0-bjf"/>
+                            <constraint firstItem="w7V-bJ-kJk" firstAttribute="trailing" secondItem="RCP-ys-EAn" secondAttribute="trailing" id="8Id-8i-6vt"/>
+                            <constraint firstItem="w7V-bJ-kJk" firstAttribute="leading" secondItem="LaQ-LQ-A9a" secondAttribute="leadingMargin" id="8h1-MM-ruV"/>
+                            <constraint firstItem="RCP-ys-EAn" firstAttribute="top" secondItem="w7V-bJ-kJk" secondAttribute="bottom" constant="8" symbolic="YES" id="CqB-sW-UyP"/>
+                            <constraint firstItem="w7V-bJ-kJk" firstAttribute="top" secondItem="pYQ-9Z-4LO" secondAttribute="bottom" constant="8" symbolic="YES" id="NGL-ss-LDe"/>
+                            <constraint firstItem="w7V-bJ-kJk" firstAttribute="trailing" secondItem="LaQ-LQ-A9a" secondAttribute="trailingMargin" id="aoY-2W-plA"/>
+                            <constraint firstItem="w7V-bJ-kJk" firstAttribute="leading" secondItem="RCP-ys-EAn" secondAttribute="leading" id="qTJ-VK-BkF"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <connections>
-                        <outlet property="newIdeaTextArea" destination="Q50-z7-V7s" id="cJD-K8-OcI"/>
+                        <outlet property="newIdeaTextField" destination="w7V-bJ-kJk" id="2LW-2H-gXL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIm-gb-sKF" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -22,6 +22,7 @@ class ViewIdeaViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         ideaTextLabel.text = ideaText;
+        self.title = ideaText;
     }
 
     override func didReceiveMemoryWarning() {
