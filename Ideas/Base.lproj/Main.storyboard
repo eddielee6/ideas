@@ -71,33 +71,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7V-bJ-kJk">
-                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gqF-m5-57F">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU2-1H-xhn">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7V-bJ-kJk">
+                                        <rect key="frame" x="0.0" y="21" width="600" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yW-3o-Nne">
+                                        <rect key="frame" x="0.0" y="51" width="600" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q1c-US-axv">
+                                        <rect key="frame" x="0.0" y="72" width="600" height="390"/>
+                                        <animations/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCP-ys-EAn">
+                                        <rect key="frame" x="0.0" y="462" width="600" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Add New Idea"/>
+                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="662" width="400" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="AddNewIdea:" destination="Qiy-zM-S7P" eventType="touchUpInside" id="uae-1B-JFC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCP-ys-EAn">
-                                <rect key="frame" x="20" y="110" width="560" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Add New Idea"/>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="662" width="400" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="AddNewIdea:" destination="Qiy-zM-S7P" eventType="touchUpInside" id="uae-1B-JFC"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="w7V-bJ-kJk" firstAttribute="trailing" secondItem="RCP-ys-EAn" secondAttribute="trailing" id="8Id-8i-6vt"/>
-                            <constraint firstItem="w7V-bJ-kJk" firstAttribute="leading" secondItem="LaQ-LQ-A9a" secondAttribute="leadingMargin" id="8h1-MM-ruV"/>
-                            <constraint firstItem="RCP-ys-EAn" firstAttribute="top" secondItem="w7V-bJ-kJk" secondAttribute="bottom" constant="8" symbolic="YES" id="CqB-sW-UyP"/>
-                            <constraint firstItem="w7V-bJ-kJk" firstAttribute="top" secondItem="pYQ-9Z-4LO" secondAttribute="bottom" constant="8" symbolic="YES" id="NGL-ss-LDe"/>
-                            <constraint firstItem="w7V-bJ-kJk" firstAttribute="trailing" secondItem="LaQ-LQ-A9a" secondAttribute="trailingMargin" id="aoY-2W-plA"/>
-                            <constraint firstItem="w7V-bJ-kJk" firstAttribute="leading" secondItem="RCP-ys-EAn" secondAttribute="leading" id="qTJ-VK-BkF"/>
+                            <constraint firstItem="gqF-m5-57F" firstAttribute="leading" secondItem="LaQ-LQ-A9a" secondAttribute="leading" id="4db-zD-zW1"/>
+                            <constraint firstItem="uDt-u3-OgR" firstAttribute="top" secondItem="gqF-m5-57F" secondAttribute="bottom" id="DJy-1L-BVf"/>
+                            <constraint firstAttribute="trailing" secondItem="gqF-m5-57F" secondAttribute="trailing" id="Wee-GH-tdv"/>
+                            <constraint firstItem="gqF-m5-57F" firstAttribute="top" secondItem="pYQ-9Z-4LO" secondAttribute="bottom" id="aSf-HO-18S"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
