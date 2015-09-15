@@ -7,16 +7,36 @@
 //
 
 import UIKit
+import CoreData
 
 class IdeasListViewController: UITableViewController {
 
-    var ideas = [String]()
+    var ideas = [NSManagedObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        ideas.append("Hello")
-        ideas.append("Test")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName:"Idea")
+        
+        do {
+            let fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            if let results = fetchedResults {
+                ideas = results
+            } else {
+                print("Fetch failed")
+            }
+        } catch _ {
+            print("Fetch crashed")
+        }
+        
+        self.tableView!.reloadData()
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,8 +46,8 @@ class IdeasListViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
-        let row = indexPath.row
-        cell.textLabel?.text = ideas[row]
+        let idea = ideas[indexPath.row]
+        cell.textLabel?.text = idea.valueForKey("title") as? String
         
         return cell
     }
@@ -41,7 +61,8 @@ class IdeasListViewController: UITableViewController {
         if segue.identifier == "ViewIdeaSegue" {
             if let destination = segue.destinationViewController as? ViewIdeaViewController {
                 if let selectedIdeaIndex = tableView.indexPathForSelectedRow {
-                    destination.ideaText = ideas[selectedIdeaIndex.row]
+                    let idea = ideas[selectedIdeaIndex.row]
+                    destination.ideaText = idea.valueForKey("title") as! String
                 }
             }
         }

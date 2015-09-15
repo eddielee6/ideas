@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewIdeaViewController: UIViewController {
 
@@ -23,6 +24,28 @@ class NewIdeaViewController: UIViewController {
     }
 
     @IBAction func AddNewIdea(sender: AnyObject) {
-        newIdeaTextField.text = "";
+        if let title = newIdeaTextField.text {
+            saveIdea(title)
+        }
+        
+        newIdeaTextField.text = ""
+        
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func saveIdea(title: String) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let entity =  NSEntityDescription.entityForName("Idea", inManagedObjectContext: managedContext)
+        let idea = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+        
+        idea.setValue(title, forKey: "title")
+        
+        do {
+            try managedContext.save()
+        } catch _ {
+            print("Save crashed")
+        }
     }
 }
