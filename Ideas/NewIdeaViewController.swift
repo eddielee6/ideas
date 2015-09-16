@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class NewIdeaViewController: UIViewController {
+class NewIdeaViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var newIdeaTextField: UITextField!
 
@@ -29,8 +29,18 @@ class NewIdeaViewController: UIViewController {
         }
         
         newIdeaTextField.text = ""
+        newIdeaTextField.resignFirstResponder()
         
         navigationController?.popViewControllerAnimated(true)
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false;
     }
     
     func saveIdea(title: String) {
